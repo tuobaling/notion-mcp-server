@@ -10,7 +10,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "npx @notionhq/notion-mcp-server --transport http --port $PORT"
+    "build": "tsc -build && node scripts/build-cli.js",
+    "dev": "tsx watch scripts/start-server.ts"
   },
   "bin": {
     "notion-mcp-server": "bin/cli.mjs"
